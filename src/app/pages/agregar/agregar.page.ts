@@ -47,13 +47,16 @@ export class AgregarPage implements OnInit {
     if (pendientes === 0) {
       this.lista.terminadaEn = new Date();
       this.lista.completada = true;
-    }
-    else {
+    } else {
       this.lista.terminadaEn = null;
       this.lista.completada = false;
     }
-    
     // console.log(item);
+    this.deseosService.guardarStorage();
+  }
+
+  borrarItem(i) {
+    this.lista.items.splice(i, 1);
     this.deseosService.guardarStorage();
   }
 
