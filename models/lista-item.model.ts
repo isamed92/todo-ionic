@@ -5,7 +5,7 @@ export class ListaItem {
     completado: boolean;
 
 
-    constructor(desc: string){
+    constructor(desc: string) {
         this.descripcion = desc;
         this.completado = false;
     }
